@@ -1,6 +1,6 @@
-
 const jwt = require('jsonwebtoken');
 const { pool } = require('../db/connect');
+
 
 const authMiddleware = async function (req, res, next) {
     try {

@@ -1,4 +1,5 @@
 import jwt_decode from 'jwt-decode';
+import axios from 'axios';
 import store from '../store/store';
 import { initiateGetProfile } from '../actions/profile';
 import { signIn } from '../actions/auth';
@@ -11,6 +12,10 @@ export const validateFields = (fieldsToValidate) => {
 export const maintainSession = () => {
     const user_token = localStorage.getItem('user_token');
     if (user_token) {
+        const currentPath = window.location.pathname;
+        if (currentPath === '/' || currentPath === '/register') {
+            history.push('/profile');
+        }
         const decoded = jwt_decode(user_token);
         updateStore(decoded);
     } else {
@@ -28,4 +33,15 @@ export const updateStore = (user) => {
         })
     );
     store.dispatch(initiateGetProfile(email));
+};
+
+export const setAuthHeader = () => {
+    const token = localStorage.getItem('user_token');
+    if (token) {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    }
+};
+
+export const removeAuthHeader = () => {
+    delete axios.defaults.headers.common['Authorization'];
 };
