@@ -2,15 +2,19 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
     user: 'postgres',
-    password: '1234',
+    password: 'root',
     host: 'localhost',
     port: 5432,
     database: 'bank_account'
 });
 
-//entered this code to make sure the connection works
+const getClient = async () => {
+    try {
+        const client = await pool.connect();
+        return client;
+    } catch (error) {
+        return null;
+    }
+};
 
-//ends here
-
-
-module.exports = { pool };
+module.exports = { pool, getClient };
