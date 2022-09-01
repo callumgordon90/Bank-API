@@ -9,10 +9,7 @@ const pool = new Pool({
 });
 
 //entered this code to make sure the connection works
-pool.connect(function (err) {
-    if (err) throw err;
-    console.log("Connected!");
-});
+
 //ends here
 
 
