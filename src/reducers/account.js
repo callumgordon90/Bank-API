@@ -1,4 +1,4 @@
-import { SET_ACCOUNT, UPDATE_ACCOUNT } from '../utils/constants';
+import { SET_ACCOUNT, UPDATE_ACCOUNT, RESET_ACCOUNT } from '../utils/constants';
 
 const accountReducer = (state = {}, action) => {
     switch (action.type) {
@@ -19,6 +19,8 @@ const accountReducer = (state = {}, action) => {
                 };
             }
             break;
+        case RESET_ACCOUNT:
+            return {};
         default:
             return state;
     }
