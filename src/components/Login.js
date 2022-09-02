@@ -59,7 +59,7 @@ class Login extends React.Component {
         const { errorMsg } = this.state;
         return (
             <div className="login-page">
-                <h1>Banking Application</h1>
+                <h1>Welcome to Aiudo Banking</h1>
                 <div className="login-form">
                     <Form onSubmit={this.handleLogin}>
                         {errorMsg && errorMsg.signin_error && (
@@ -95,7 +95,8 @@ class Login extends React.Component {
                         </div>
                     </Form>
                 </div>
-            </div>
+                <div class="footer"><img src="logo-aiudo.png" /></div>
+            </div >
         );
     }
 }

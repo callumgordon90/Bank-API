@@ -51,6 +51,7 @@ class Account extends React.Component {
                         <Summary />
                     )}
                 </div>
+                <div class="footer"><img src="logo-aiudo.png" /></div>
             </div>
         );
     }

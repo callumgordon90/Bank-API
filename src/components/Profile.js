@@ -116,6 +116,7 @@ class Profile extends React.Component {
                         Submit
                     </Button>
                 </Form>
+                <div class="footer"><img src="logo-aiudo.png" /></div>
             </div>
         );
     }

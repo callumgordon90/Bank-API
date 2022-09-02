@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header>
-            <h1>Banking Application</h1>
+            <h1>The Bank of Aiudo</h1>
             <div className="links">
                 <Link to="/account" className="link">
                     Account
