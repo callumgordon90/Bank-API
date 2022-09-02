@@ -1,4 +1,4 @@
-banking project:
+Banking project:
 
 API with json web token authentification
 

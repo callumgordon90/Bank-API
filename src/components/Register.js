@@ -82,7 +82,7 @@ class Register extends React.Component {
         const { errorMsg, successMsg, isSubmitted } = this.state;
         return (
             <div className="login-page">
-                <h2>Register User</h2>
+                <header><h2>Register User</h2></header>
                 <div className="login-form">
                     <Form onSubmit={this.registerUser}>
                         {errorMsg && errorMsg.signup_error ? (
@@ -149,6 +149,7 @@ class Register extends React.Component {
                         </div>
                     </Form>
                 </div>
+                <div className="footer"><img src="logo-aiudo.png" /></div>
             </div>
         );
     }
