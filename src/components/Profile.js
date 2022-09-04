@@ -80,6 +80,7 @@ class Profile extends React.Component {
         const { errorMsg, first_name, last_name, email, isSubmitted } = this.state;
         return (
             <div className="col-md-6 offset-md-3">
+                <h5> Welcome to your profile page! You can edit your first name and last name below:</h5>
                 <Form onSubmit={this.handleSubmit} className="profile-form">
                     {errorMsg && errorMsg.update_error ? (
                         <p className="errorMsg centered-message">{errorMsg.update_error}</p>

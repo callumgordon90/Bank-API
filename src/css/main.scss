@@ -34,8 +34,8 @@ body {
 }
 
 .successMsg {
-    color: #00ff00;
-    background: #077707;
+    color: #dadd3f;
+    background: #8d8f0b;
     padding: 0.5rem;
     font-weight: bolder;
 }
@@ -89,6 +89,7 @@ header {
 
         .link:hover,
         .link:active {
+            background-color: #2719ec;
             border-bottom: 2px solid #fff;
         }
     }
