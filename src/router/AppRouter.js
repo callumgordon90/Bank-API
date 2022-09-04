@@ -10,8 +10,10 @@ import Header from '../components/Header';
 import Logout from '../components/Logout';
 import Account from '../components/Account';
 
+// The hisory function allows us to redirect to profile page after login
 export const history = createBrowserHistory();
 
+//This is the router which unites all of the other components of the front end application
 const AppRouter = ({ auth }) => {
     return (
         <Router history={history}>

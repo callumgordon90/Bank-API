@@ -4,6 +4,7 @@ const { pool } = require('../db/connect');
 const { isInvalidField } = require('../utils/common');
 const Router = express.Router();
 
+//function to up date the details of a user profile
 Router.post('/profile', authMiddleware, async (req, res) => {
     try {
         const { first_name, last_name } = req.body;
@@ -32,6 +33,7 @@ Router.post('/profile', authMiddleware, async (req, res) => {
     }
 });
 
+// function to retrieve the data of a user profile
 Router.get('/profile', authMiddleware, async (req, res) => {
     try {
         res.send(req.user);

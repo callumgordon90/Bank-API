@@ -1,3 +1,4 @@
+// all necessary dependencies:
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -5,17 +6,23 @@ const puppeteer = require('puppeteer');
 const moment = require('moment');
 const { pool } = require('../db/connect');
 
+// This function makes sure that an the correct fields are added by the user
 const isInvalidField = (receivedFields, validFieldsToUpdate) => {
     return receivedFields.some(
         (field) => validFieldsToUpdate.indexOf(field) === -1
     );
 };
 
+//This function queries the database to check that a user with the same details
+//does not already exist in the database, and if there is a valid user with this email in the database
 const validateUser = async (email, password) => {
     const result = await pool.query(
         'select userid,  email, password from bank_user where email = $1',
         [email]
     );
+
+    //If such a user exists, then we can compare the password of the user
+    //with the password saved in the database to check if they match.
     const user = result.rows[0];
     if (user) {
         const isMatch = await bcrypt.compare(password, user.password);
@@ -29,7 +36,9 @@ const validateUser = async (email, password) => {
         throw new Error();
     }
 };
-
+// function for json web token authentification
+// If we get the user from validateUser function, 
+// then we call generateAuthToken to generate jwt token by passing that user object to it.
 const generateAuthToken = async (user) => {
     const { userid, email } = user;
     const secret = process.env.secret;
@@ -37,6 +46,7 @@ const generateAuthToken = async (user) => {
     return token;
 };
 
+// function to query database for transaction history
 const getTransactions = async (account_id, start_date, end_date) => {
     let result;
     try {
@@ -57,6 +67,7 @@ const getTransactions = async (account_id, start_date, end_date) => {
     }
 };
 
+// function to generate a pdf of transaction history
 const generatePDF = async (filepath) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();

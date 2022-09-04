@@ -12,3 +12,5 @@ const authReducer = (state = {}, action) => {
 };
 
 export default authReducer;
+
+// This file is an authentication reducer with controls the redux sign in and sign out process

@@ -1,3 +1,5 @@
+// This file integrates the login API into the React front end
+
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
@@ -7,6 +9,9 @@ import { resetErrors } from '../actions/errors';
 import { validateFields } from '../utils/common';
 import { Link } from 'react-router-dom';
 
+
+// This page is the login component. It displays the login form
+
 class Login extends React.Component {
     state = {
         email: '',
@@ -14,6 +19,9 @@ class Login extends React.Component {
         errorMsg: ''
     };
 
+    // In this method checks if previous props not equal to current props by using lodash isEqual method 
+    // and only then sets error in the errorMsg state. 
+    //This condition is necessary to avoid the infinite loop error.
     componentDidUpdate(prevProps) {
         if (!_.isEqual(prevProps.errors, this.props.errors)) {
             this.setState({ errorMsg: this.props.errors });
@@ -55,6 +63,7 @@ class Login extends React.Component {
         });
     };
 
+    //This part displays the elements on the client side
     render() {
         const { errorMsg } = this.state;
         return (
@@ -102,6 +111,9 @@ class Login extends React.Component {
     }
 }
 
+// If there is an error added in the redux store it will be added
+// to props.errors because of the mapStateToProps function 
+// then the componentDidUpdate method takes that updated value
 const mapStateToProps = (state) => ({
     errors: state.errors
 });

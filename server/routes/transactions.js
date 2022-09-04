@@ -9,6 +9,7 @@ const { getTransactions, generatePDF } = require('../utils/common');
 const { getClient } = require('../db/connect');
 const Router = express.Router();
 
+//function to deposit money into a user account
 Router.post('/deposit/:id', authMiddleware, async (req, res) => {
     const client = await getClient();
     try {
@@ -41,6 +42,7 @@ Router.post('/deposit/:id', authMiddleware, async (req, res) => {
     }
 });
 
+// function to withdraw money from a user account
 Router.post('/withdraw/:id', authMiddleware, async (req, res) => {
     const client = await getClient();
     try {
@@ -80,6 +82,7 @@ Router.post('/withdraw/:id', authMiddleware, async (req, res) => {
     }
 });
 
+//function to retrieve transaction history from a user account
 Router.get('/transactions/:id', authMiddleware, async (req, res) => {
     const { start_date, end_date } = req.query;
     try {
@@ -93,6 +96,7 @@ Router.get('/transactions/:id', authMiddleware, async (req, res) => {
     }
 });
 
+//pdf transaction history functionality
 Router.get('/download/:id', authMiddleware, async (req, res) => {
     try {
         const { start_date, end_date } = req.query;

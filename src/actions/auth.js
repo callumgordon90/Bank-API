@@ -21,6 +21,8 @@ export const initiateLogin = (email, password) => {
             const user = result.data;
             localStorage.setItem('user_token', user.token);
             dispatch(signIn(user));
+            // this next line adds profile data to the redux store
+            // (so that we cannot access login or register pages once already logged in)
             dispatch(initiateGetProfile(user.email));
             history.push('/profile');
         } catch (error) {
@@ -29,6 +31,9 @@ export const initiateLogin = (email, password) => {
     };
 };
 
+// In this function we call the API on port 5000
+// by passing the user data as the second parameter to it and sending back object {success: true } 
+// as a result of API for successful and {success: false} for failure
 export const registerNewUser = (data) => {
     return async (dispatch) => {
         try {

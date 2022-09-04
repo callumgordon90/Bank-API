@@ -1,5 +1,7 @@
 import { SET_ACCOUNT, UPDATE_ACCOUNT, RESET_ACCOUNT } from '../utils/constants';
 
+//This reducer alters the states of the account on the front end as the user makes financial transactions
+
 const accountReducer = (state = {}, action) => {
     switch (action.type) {
         case SET_ACCOUNT:

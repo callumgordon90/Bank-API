@@ -1,3 +1,8 @@
+// Authorisation middleware: 
+// this file checks if authentification token is sent when a request is made to the API route by the client.
+// the request is only sent forward to the private routes if the token is valid.
+// otherwise an error is return without executing the route.
+
 const jwt = require('jsonwebtoken');
 const { pool } = require('../db/connect');
 

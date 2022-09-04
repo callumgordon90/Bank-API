@@ -3,6 +3,7 @@ const authMiddleware = require('../middleware/auth');
 const { pool } = require('../db/connect');
 const Router = express.Router();
 
+//function to get account for a given user
 const getAccountByAccountId = async function (account_id) {
     try {
         const result = await pool.query(
@@ -46,6 +47,7 @@ Router.get('/account', authMiddleware, async (req, res) => {
     }
 });
 
+//function for a user to create a new account
 Router.post('/account', authMiddleware, async (req, res) => {
     const { account_no, bank_name, ifsc } = req.body;
     try {
@@ -61,6 +63,7 @@ Router.post('/account', authMiddleware, async (req, res) => {
     }
 });
 
+//function to modify the details of an account
 Router.patch('/account', authMiddleware, async (req, res) => {
     const { ifsc } = req.body;
     try {

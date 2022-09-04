@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// the Header component displays a header on the frontend for the logged in user
+
 const Header = () => {
     return (
         <header>

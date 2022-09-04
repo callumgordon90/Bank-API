@@ -9,6 +9,8 @@ export const validateFields = (fieldsToValidate) => {
     return fieldsToValidate.every((field) => Object.values(field)[0] !== '');
 };
 
+// In this function I user json_decode by passing token and pass that extracted information to updateStore function
+// which dispatches the signIn action creator function. (The purpose of this is to allow user to stay logged in after refresh)
 export const maintainSession = () => {
     const user_token = localStorage.getItem('user_token');
     if (user_token) {
@@ -35,6 +37,8 @@ export const updateStore = (user) => {
     store.dispatch(initiateGetProfile(email));
 };
 
+// before making the API call, this function will be called
+// and the header will be automatically added to the default request header
 export const setAuthHeader = () => {
     const token = localStorage.getItem('user_token');
     if (token) {

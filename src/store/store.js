@@ -1,4 +1,5 @@
-// this is a redux store with a single authentication reducer
+// This is the redux store which contains all of the reducers used on the front end application
+//I have also added redux dev tool to see realtime actions dispatched.
 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';

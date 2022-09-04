@@ -1,3 +1,5 @@
+// This file displays the profile page on frontend once the user is logged in with correct credentials
+
 import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
@@ -5,6 +7,7 @@ import { Form, Button } from 'react-bootstrap';
 import { initiateUpdateProfile } from '../actions/profile';
 import { validateFields } from '../utils/common';
 import { resetErrors } from '../actions/errors';
+
 
 class Profile extends React.Component {
     state = {

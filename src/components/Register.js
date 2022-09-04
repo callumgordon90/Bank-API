@@ -7,6 +7,8 @@ import { resetErrors } from '../actions/errors';
 import { validateFields } from '../utils/common';
 import { Link } from 'react-router-dom';
 
+// This page is the register component. It displays the register form
+
 class Register extends React.Component {
     state = {
         first_name: '',
