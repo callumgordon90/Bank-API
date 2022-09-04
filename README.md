@@ -105,14 +105,14 @@ Run the command 'yarn start' in the main folder to start the server on port 5000
 
 # Part 2 EXTRA!!!: FRONT END APP!
 
-## Introduction.
+## Introduction:
 
 - We can see that the backend functions correctly if we test the endpoints with Postman. However, I wanted to create a frontend so that users can interect directly with the backend. I created this frontend with React and Redux <br>
   
 
 --------------------------------------------
 
-## Characteristics of the frontend.
+## Characteristics of the frontend:
 
 - The frontend has a component for each element the the user interacts with
 
@@ -163,7 +163,7 @@ For me personally, as always, this was an interesting challenge and despite some
 
 - controlling all versions of dependencies and making sure that they are all interacting with one another correctly
 
--configuring the server and the database correctly so that they can comminicate with one another
+- configuring the server and the database correctly so that they can comminicate with one another
 
 - testing the endpoints one by one in Postman and discovering issues with syntax in the code that prevented full functionality (a painstaking process)!
 
