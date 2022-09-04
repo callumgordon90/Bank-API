@@ -60,6 +60,7 @@ class Login extends React.Component {
         return (
             <div className="login-page">
                 <header><h1>Welcome to Aiudo Banking</h1></header>
+                <p>The smart way to do banking</p>
                 <div className="login-form">
                     <Form onSubmit={this.handleLogin}>
                         {errorMsg && errorMsg.signin_error && (
