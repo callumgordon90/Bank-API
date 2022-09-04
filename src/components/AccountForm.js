@@ -1,3 +1,5 @@
+// In this file I add the forms to withdraw and deposit amount and to update the account details
+
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
@@ -15,6 +17,9 @@ import { resetErrors } from '../actions/errors';
 import { validateFields } from '../utils/common';
 import { maskNumber } from '../utils/mask';
 import AddAccountForm from './AddAccountForm';
+
+// The form contains functionality to check if the user account number already exists 
+// and only under that condition show the form to withdraw or deposit or else show the form to add an account.
 
 class AccountForm extends React.Component {
     state = {

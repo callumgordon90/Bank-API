@@ -1,3 +1,5 @@
+// This file contains the code which displays the forms to generate a transaction report for the user
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
@@ -97,6 +99,17 @@ class Summary extends React.Component {
         } = this.state;
         const account_no = account.account_no ? maskNumber(account.account_no) : '';
 
+        // NOTE: The 'generate report' button calls the /transactions/account_id route by passing the selected start date 
+        // and end date and get the list of transactions and adding it to the redux store
+
+
+        // ALSO NOTE: clicking the 'download report' button calls the /download/account_id route from routes/transactions.js file 
+        // where the transactions list is taken. It is then passed to the transactions.ejs file from server/views folder.
+        // the ejs.compile method is then used to generate data with dynamic values from transactions array
+        // which is stored in the output variable where that output html is written to the transaction.html file. 
+        // Then the generatePDF function is called to generate the pdf file using puppeteer library by passing the generated transactions.html file
+
+        // The generated transactions.html and transactions.pdf will be stored in views folder in BACKEND
         return account_no ? (
             <div className="summary-form">
                 <p>Transaction History</p>

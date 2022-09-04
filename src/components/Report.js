@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Bootstrap elements for displaying the transaction table on the front end
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 const Report = ({ transactions }) => {

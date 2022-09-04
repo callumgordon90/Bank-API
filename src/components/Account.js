@@ -13,6 +13,7 @@ class Account extends React.Component {
         this.setState({ selectedType });
     };
 
+    // In this part the buttons for the deposit, withdraw, and summary page are displayed
     render() {
         const { selectedType } = this.state;
 

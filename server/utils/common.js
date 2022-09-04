@@ -2,7 +2,7 @@
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer'); // this dependency is used for generating downloadable PDFs
 const moment = require('moment');
 const { pool } = require('../db/connect');
 

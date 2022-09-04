@@ -1,3 +1,5 @@
+// This file contains the functions which permit the user to generate and download transaction reports
+
 import download from 'downloadjs';
 import {
     BASE_API_URL,

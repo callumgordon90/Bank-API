@@ -8,4 +8,4 @@ export const SET_TRANSACTIONS = 'SET_TRANSACTIONS';
 export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const SET_ACCOUNT = 'SET_ACCOUNT';
 export const UPDATE_ACCOUNT = 'UPDATE_ACCOUNT';
-export const RESET_ACCOUNT = 'RESET_ACCOUNT';
+export const RESET_ACCOUNT = 'RESET_ACCOUNT'; // this function prevents old redundant info being saved in redux

@@ -9,6 +9,10 @@ const { getTransactions, generatePDF } = require('../utils/common');
 const { getClient } = require('../db/connect');
 const Router = express.Router();
 
+// NOTE: In the following two functions, when a user deposits or withdraws any amount, 
+// the data is added in transactions table and also updating the total_balance column from account table
+
+
 //function to deposit money into a user account
 Router.post('/deposit/:id', authMiddleware, async (req, res) => {
     const client = await getClient();
