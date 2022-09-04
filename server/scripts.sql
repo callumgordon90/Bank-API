@@ -3,10 +3,8 @@ These commands are migrated manually into pgADMIN (the user interface for the po
 When the connection is opened in /server with 'yarn start', the gate opens on port 5000,
 and new inputs can be inserted either on postman or the frontend*/
 
-
 /* The instruction to create the database*/
 CREATE DATABASE bank_account;
-
 
 /* user table*/
 CREATE TABLE bank_user(
