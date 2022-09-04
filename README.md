@@ -59,7 +59,7 @@ NOTE: The backend source code of this app is contained entirely in the 'server' 
 
 
 
-![Structure of backend](Bank-API/img/backendstructure.jpg)
+![Structure of backend](img/backendstructure.jpg)
 
 ***
 A view of the database tables and how they relate to one another:
@@ -68,7 +68,7 @@ A view of the database tables and how they relate to one another:
 ***
 
 A view of all of the tables of the database as they appear in the code..
-![VSC tables](img\vstables.jpg)
+![VSC tables](img/vstables.jpg)
 ***
 
 ..and here we can see the user table as it appears in the PostgreSQL database
