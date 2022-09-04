@@ -59,11 +59,11 @@ NOTE: The backend source code of this app is contained entirely in the 'server' 
 
 
 
-![Structure of backend](img\backendstructure.jpg)
+![Structure of backend](Bank-API/img/backendstructure.jpg)
 
 ***
 A view of the database tables and how they relate to one another:
-![PostgreSQL table plan](img\pgadmin.jpg)
+![PostgreSQL table plan](img/pgadmin.jpg)
 
 ***
 
