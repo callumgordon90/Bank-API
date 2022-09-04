@@ -72,15 +72,15 @@ A view of all of the tables of the database as they appear in the code..
 ***
 
 ..and here we can see the user table as it appears in the PostgreSQL database
-![Table example](img\tableexample.jpg)
+![Table example](img/tableexample.jpg)
 ***
 
 Run the command 'yarn start' in the main folder to start the server on port 5000...
-![Open port](img\port5000.jpg)
+![Open port](img/port5000.jpg)
 
 ***
 ...Now we can test the endpoints in Postman and check that the program is working correctly!
-![Postman testing endpoints](img\postmantest.jpg)
+![Postman testing endpoints](img/postmantest.jpg)
  
 
 
@@ -126,33 +126,33 @@ NOTE: The frontend source code of this app is contained entirely in the 'src' fo
 
 ---------------------------------------
 Home page of the app: the first thing that the user sees..
-![Home page](img\home.jpg)
+![Home page](img/home.jpg)
 
 ***
 This is the profile page that the user sees after logging in:
-![Login page](img\profile.jpg)
+![Login page](img/profile.jpg)
 
 ***
 The sign up page to create a profile:
-![Register user page](img\registeruser.jpg)
+![Register user page](img/registeruser.jpg)
 ***
 This page gives the user an overview of all the possible transactions that they can undertake:
-![Summary page](img\summary.jpg)
+![Summary page](img/summary.jpg)
 ***
 
 Here the user can deposit money into their account:
-![Deposit money](img\deposit.jpg) 
+![Deposit money](img/deposit.jpg) 
 ***
 Here the user can withdraw money from their account
-![Withdraw money](img\withdraw.jpg)
+![Withdraw money](img/withdraw.jpg)
 ***
 
 On this page the user can view a transaction report which contains all of their previous withdrawals and deposits for a given period:
-![Transaction Report](img\transactionreport.jpg)
+![Transaction Report](img/transactionreport.jpg)
 ***
 
 ..Finally, the user is able to donwload their transaction report in PDF format and print it off!
-![Downloaded transaction report](img\reportpdf.jpg)
+![Downloaded transaction report](img/reportpdf.jpg)
 ***
 
 # Final Reflections on this project:
