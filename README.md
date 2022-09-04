@@ -178,6 +178,8 @@ For me personally, as always, this was an interesting challenge and despite some
 
 - Using React and Redux has always been a challenge for me (with the changing of states and using reducers being a challenge), so I feel this project increased my abilities on the frontend.
 
+- Finally... I worked on two different development branches for this project ('main' and 'dev'). It wasn't necessary but I wanted to demonstrate my understanding of git and also simulate the kind of environment that would exist in a company with multiple people working on different branches of the same project.
+
 ---
 
 Thanks for reading!
