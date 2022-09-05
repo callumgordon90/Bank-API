@@ -75,7 +75,7 @@ A view of all of the tables of the database as they appear in the code..
 ![Table example](img/tableexample.jpg)
 ***
 
-Run the command 'yarn start' in the main folder to start the server on port 5000...
+Run the command 'yarn start' in the server folder to start the server on port 5000...
 ![Open port](img/port5000.jpg)
 
 ***
