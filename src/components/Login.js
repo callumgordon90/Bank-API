@@ -68,7 +68,7 @@ class Login extends React.Component {
         const { errorMsg } = this.state;
         return (
             <div className="login-page">
-                <header><h1>Welcome to Aiudo Banking</h1></header>
+                <h1>Welcome to Callum's Bank</h1>
                 <p>The smart way to do banking</p>
                 <div className="login-form">
                     <Form onSubmit={this.handleLogin}>
@@ -105,7 +105,7 @@ class Login extends React.Component {
                         </div>
                     </Form>
                 </div>
-                <div className="footer"><img src="logo-aiudo.png" /></div>
+                <div className="footer"><img src="logo.png" /></div>
             </div >
         );
     }

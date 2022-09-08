@@ -151,7 +151,7 @@ class Register extends React.Component {
                         </div>
                     </Form>
                 </div>
-                <div className="footer"><img src="logo-aiudo.png" /></div>
+                <div className="footer"><img src="logo.png" /></div>
             </div>
         );
     }

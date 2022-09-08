@@ -335,7 +335,8 @@ input[type='submit'],
 }
 
 
-.logo-aiudo.png {
+.logo.png {
+    display: flex;
     height: 5%;
     width: 5%;
     background-color: rgb(255, 255, 255);
