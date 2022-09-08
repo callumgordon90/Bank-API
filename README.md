@@ -1,4 +1,4 @@
-# Welcome Callum's Bank!
+# Welcome to Callum's Bank!
 
 
 <div align=center>
